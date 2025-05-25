@@ -1,0 +1,70 @@
+Budget Tracker – Component Structure and Explanation
+What’s a Wrapper Component?
+In React, a wrapper component is a structural component that surrounds other components to provide a shared layout or behavior. It’s useful when you want to apply consistent styling, navigation, or functionality across different parts of your application without duplicating code.
+
+In this project, the Main.jsx component serves as the wrapper. It provides a common layout structure that includes navigation and a decorative image, while also handling the rendering of child routes using the Outlet component from React Router.
+
+How the Main component works:
+
+Retrieves shared data (such as userName) using the useLoaderData() hook.
+
+Defines a layout structure with a container div.
+
+Renders the Nav component and passes the userName as a prop.
+
+Uses the Outlet component as a placeholder for matched child routes.
+
+Displays a consistent visual element (wave image) across pages.
+
+By using this wrapper, the layout and navigation remain consistent, providing a cohesive experience across the app.
+
+Component-by-Component Overview
+AddBudgetForm.jsx
+This component renders a form that allows users to create a new budget.
+
+Purpose: Enable users to add and submit new budgets.
+
+Functionality: Includes form inputs for the budget name and amount, and handles form submission to save the data.
+
+AddExpenseForm.jsx
+This component provides a form for recording new expenses.
+
+Purpose: Let users track where their money goes.
+
+Functionality: Accepts inputs for the expense name, amount, and associated budget, and processes the data on submission.
+
+BudgetItem.jsx
+Displays information related to a single budget.
+
+Purpose: Show budget details including name, total amount, and linked expenses.
+
+Functionality: May also offer controls for editing or deleting the budget.
+
+ExpenseItem.jsx
+Presents details of an individual expense.
+
+Purpose: Display expense-specific information.
+
+Functionality: Shows the name, value, and linked budget; may include edit and delete options.
+
+Intro.jsx
+An introductory component for first-time users.
+
+Purpose: Welcome users and provide an overview of the application.
+
+Functionality: Includes a brief explanation and a call-to-action to create the first budget.
+
+Nav.jsx
+Renders the navigation bar for the application.
+
+Purpose: Provide users with easy navigation across the app.
+
+Functionality: Contains links to different sections, displays the user’s name, and may include a logout option.
+
+Table.jsx
+Displays a structured list of expenses in table format.
+
+Purpose: Help users manage expenses through a clear and sortable list.
+
+Functionality: Presents data in rows and columns, with options for sorting and possibly filtering the entries.
+
